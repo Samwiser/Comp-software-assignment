@@ -35,6 +35,20 @@ struct slot{
 	struct slot *down;
 }slot;
 
+struct players						//Struct containing player data(name, type, abilities, life points and their position)
+{
+	char player_name[100];
+	char type [100];
+	int Life_pts;
+	int Smartness;
+	int Strength;
+	int Magic_Skills;
+	int Luck;
+	int Dexterity;
+	int position;
+};
+
+struct players players_array[100];
 
 /*
  * FUNCTIONS PROTOTYPES
@@ -49,6 +63,9 @@ struct slot{
 //Returns the size of the board
 int getBoardSize();
 
+int getNumPlayers(int NumberPlayers);
+
+void getAbilities(int NumberPlayers);
 //Asks the user to insert the row and the column of the element
 //she wants to find given a board of size equal to maxsize
 void getDesiredElement(int maxsize, int * row, int * col);

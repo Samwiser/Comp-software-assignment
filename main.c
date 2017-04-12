@@ -8,6 +8,8 @@ int main(){
 
 	int row, column;
 
+	int NumberPlayers = 0;
+	
 	struct slot* currSlot = NULL;
 	struct slot *foundSlots;
 	bool explored[BOARD_SIZE][BOARD_SIZE];
@@ -29,6 +31,7 @@ int main(){
 	//Creates the board
 	createBoard(BOARD_SIZE,&upLeft, &upRight, &downLeft, &downRight);
 
+	getNumPlayers(NumberPlayers);
 	
 	/*	Asks the user the row and the column of the slot
 		s/he wants to retrieve from the board.

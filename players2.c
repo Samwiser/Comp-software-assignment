@@ -28,7 +28,7 @@ void playerInformation()
 		while(Type[i] > 4 || Type[i] <= 0)//while loop keeps going until 1 of the 4 options is picked
 		{
 			printf("What player type do you want %s\n", &Players[i].player_Name);
-			printf("1: Ogre\n2: Human\n3: Wizard\n4: Elf\n");
+			printf("[1] Ogre\n[2] Human\n[3] Wizard\n[4] Elf\n");
 			scanf("%d", &Type[i]);//stores answer in an integer array
 		}
 	}

@@ -15,6 +15,9 @@ void Near();
 void Distant();
 void Magical();
 
+//Sort players so that the last player in array is a dead player
+void sort(); 
+
 int i;//global variable
 
 void playersGO()
@@ -554,4 +557,27 @@ void Magical()
 	}
 	printf("Player %s attacks %s for %d Life points.", Players[i].player_Name, victims[num]->player_Name, (int)(((double)Players[i].Magic_Skills * 0.5)+((double)Players[i].Smartness * 0.2)));
 	victims[num]->Life_pts -= (int)(((double)Players[i].Magic_Skills * 0.5)+((double)Players[i].Smartness * 0.2));
+}
+
+void sort() //Sort players so that Last player is the dead player and reduce number of player
+{
+	for( i = 0; i < NumberPlayers; i++)
+	{
+		if(Players[i].Life_pts <= 0)
+		{
+			strcpy(Players[i].player_Name, Players[i+1].player_Name);
+			Players[i].Life_pts = Players[i+1].Life_pts;
+			Players[i].Dexterity = Players[i+1].Dexterity;
+			Players[i].Luck = Players[i+1].Luck;
+			Players[i].Magic_Skills = Players[i+1].Magic_Skills;
+			Players[i].Smartness = Players[i+1].Smartness;
+			Players[i].Strength = Players[i+1].Strength;
+			Players[i].place = Players[i+1].place;
+			
+			Players[i+1].Life_pts = 0;
+			
+			NumberPlayers = NumberPlayers - 1;
+			
+		}
+	}
 }

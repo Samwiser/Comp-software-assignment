@@ -375,6 +375,7 @@ void Move(int i)//move function
 void Quit()
 {
 	printf("\n%s has quit the game.", Players[i].player_Name);//haven't done the quit part or dying part yet
+	Players[i].Life_pts = 0;
 }
 
 void Near()

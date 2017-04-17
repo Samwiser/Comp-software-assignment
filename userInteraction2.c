@@ -35,6 +35,7 @@ void playersGO()
 
 	}
 	
+	sort();
 	//after each round prints out all remaining player information
 	if(NumberPlayers != 1)
 	{

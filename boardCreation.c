@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "Crossfire_Header3.h"
+#include "crossfireOperations2.h"
 
 /*
  * This function creates the board

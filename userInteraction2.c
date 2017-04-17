@@ -134,6 +134,13 @@ void Attack(int i)
 			}
 		}
 	}
+	for( i = 0; i < NumberPlayers; i++ )
+	{
+		if(Players[i].Life_pts <= 0)
+		{
+			printf("\nPlayer %s is dead \n", Players[i].player_Name);
+		}
+	}
 }
 
 void Move(int i)//move function

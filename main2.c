@@ -14,6 +14,16 @@ int main()
 		playersGO();			
 	}	
 	return 0;
+	
+	if(NumberPlayers = 1)
+	{
+		printf("------------------------\n");
+		printf("------------------------\n");
+		printf("%s is the winner \n", Players[0].player_Name);
+		printf("------------------------\n");
+		printf("------------------------\n");
+	}
+	return 0;
 }
 
 char *findSlotType(enum slotType type)

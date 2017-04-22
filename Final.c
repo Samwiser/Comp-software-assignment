@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+//This file contains all the header files combined into one single file for easier excecution
+//This file is used to test the code and not the original submission
 
 #define MAX_PLAYER_SIZE 6
 #define BOARD_SIZE 7

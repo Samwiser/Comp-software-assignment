@@ -570,7 +570,7 @@ void Magical()
 
 void sort() //Sort players so that Last player is the dead player and reduce number of player
 {
-	for( i = 0; i < NumberPlayers; i++)
+	for( i = 0; i < NumberPlayers; i++)	//When player life points is less than 0, the player is pushed to the end of the array and number op players is decreased so that struct isnt used anymore
 	{
 		if(Players[i].Life_pts <= 0)
 		{
